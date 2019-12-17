@@ -31,18 +31,17 @@
             this.MainTabs = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.customerBillingInformationControl1 = new CrudCenter.UserControls.CustomerBillingInformationControl();
             this.allCustomerInformationDataGrid = new System.Windows.Forms.DataGridView();
+            this.servicesRequestedControl1 = new CrudCenter.UserControls.ServicesRequestedControl();
+            this.customerServiceAddressControl1 = new CrudCenter.UserControls.CustomerServiceAddressControl();
+            this.addNewCustomerBtn = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.FertCustomerTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.FertSearchGroupBox = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.customerBillingInformationControl1 = new CrudCenter.UserControls.CustomerBillingInformationControl();
-            this.servicesRequestedControl1 = new CrudCenter.UserControls.ServicesRequestedControl();
-            this.customerServiceAddressControl1 = new CrudCenter.UserControls.CustomerServiceAddressControl();
-            this.button1 = new System.Windows.Forms.Button();
             this.MainTabs.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -83,12 +82,12 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.16008F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 425F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 923F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 88F));
             this.tableLayoutPanel1.Controls.Add(this.customerBillingInformationControl1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.allCustomerInformationDataGrid, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.servicesRequestedControl1, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.customerServiceAddressControl1, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.button1, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.addNewCustomerBtn, 1, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -100,16 +99,53 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1890, 1009);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
+            // customerBillingInformationControl1
+            // 
+            this.customerBillingInformationControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.customerBillingInformationControl1.Location = new System.Drawing.Point(79, 26);
+            this.customerBillingInformationControl1.Name = "customerBillingInformationControl1";
+            this.customerBillingInformationControl1.Size = new System.Drawing.Size(371, 385);
+            this.customerBillingInformationControl1.TabIndex = 0;
+            // 
             // allCustomerInformationDataGrid
             // 
             this.allCustomerInformationDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tableLayoutPanel1.SetColumnSpan(this.allCustomerInformationDataGrid, 3);
             this.allCustomerInformationDataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.allCustomerInformationDataGrid.Location = new System.Drawing.Point(80, 523);
+            this.allCustomerInformationDataGrid.Location = new System.Drawing.Point(79, 523);
             this.allCustomerInformationDataGrid.Name = "allCustomerInformationDataGrid";
-            this.allCustomerInformationDataGrid.Size = new System.Drawing.Size(1724, 483);
+            this.allCustomerInformationDataGrid.Size = new System.Drawing.Size(1719, 483);
             this.allCustomerInformationDataGrid.TabIndex = 4;
             this.allCustomerInformationDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView2_CellContentClick);
+            // 
+            // servicesRequestedControl1
+            // 
+            this.servicesRequestedControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.servicesRequestedControl1.Location = new System.Drawing.Point(881, 26);
+            this.servicesRequestedControl1.Name = "servicesRequestedControl1";
+            this.servicesRequestedControl1.Size = new System.Drawing.Size(917, 385);
+            this.servicesRequestedControl1.TabIndex = 2;
+            // 
+            // customerServiceAddressControl1
+            // 
+            this.customerServiceAddressControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customerServiceAddressControl1.Location = new System.Drawing.Point(456, 26);
+            this.customerServiceAddressControl1.Name = "customerServiceAddressControl1";
+            this.customerServiceAddressControl1.Size = new System.Drawing.Size(419, 385);
+            this.customerServiceAddressControl1.TabIndex = 1;
+            // 
+            // addNewCustomerBtn
+            // 
+            this.addNewCustomerBtn.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.addNewCustomerBtn.Location = new System.Drawing.Point(177, 442);
+            this.addNewCustomerBtn.Name = "addNewCustomerBtn";
+            this.addNewCustomerBtn.Size = new System.Drawing.Size(175, 50);
+            this.addNewCustomerBtn.TabIndex = 5;
+            this.addNewCustomerBtn.Text = "Add New Customer";
+            this.addNewCustomerBtn.UseVisualStyleBackColor = true;
+            this.addNewCustomerBtn.Click += new System.EventHandler(this.AddNewCustomerBtn_Click);
             // 
             // tabPage2
             // 
@@ -136,7 +172,7 @@
             this.FertCustomerTableLayout.ColumnCount = 3;
             this.FertCustomerTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 42.15686F));
             this.FertCustomerTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 57.84314F));
-            this.FertCustomerTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65F));
+            this.FertCustomerTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 69F));
             this.FertCustomerTableLayout.Controls.Add(this.FertSearchGroupBox, 0, 0);
             this.FertCustomerTableLayout.Controls.Add(this.dataGridView1, 0, 1);
             this.FertCustomerTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -166,7 +202,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.0367F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.9633F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 603F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 413F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 419F));
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 16);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -187,42 +223,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1890, 713);
             this.dataGridView1.TabIndex = 1;
             // 
-            // customerBillingInformationControl1
-            // 
-            this.customerBillingInformationControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.customerBillingInformationControl1.Location = new System.Drawing.Point(80, 26);
-            this.customerBillingInformationControl1.Name = "customerBillingInformationControl1";
-            this.customerBillingInformationControl1.Size = new System.Drawing.Size(376, 385);
-            this.customerBillingInformationControl1.TabIndex = 0;
-            // 
-            // servicesRequestedControl1
-            // 
-            this.servicesRequestedControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.servicesRequestedControl1.Location = new System.Drawing.Point(887, 26);
-            this.servicesRequestedControl1.Name = "servicesRequestedControl1";
-            this.servicesRequestedControl1.Size = new System.Drawing.Size(917, 385);
-            this.servicesRequestedControl1.TabIndex = 2;
-            // 
-            // customerServiceAddressControl1
-            // 
-            this.customerServiceAddressControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customerServiceAddressControl1.Location = new System.Drawing.Point(462, 26);
-            this.customerServiceAddressControl1.Name = "customerServiceAddressControl1";
-            this.customerServiceAddressControl1.Size = new System.Drawing.Size(419, 385);
-            this.customerServiceAddressControl1.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(180, 442);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 50);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Add New Customer";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // CustomerPortal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,6 +231,7 @@
             this.Controls.Add(this.MainTabs);
             this.Name = "CustomerPortal";
             this.Text = "Customer Portal";
+            this.Load += new System.EventHandler(this.CustomerPortal_Load);
             this.MainTabs.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -254,12 +255,11 @@
         private System.Windows.Forms.GroupBox FertSearchGroupBox;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private UserControls.CustomerBillingInformationControl customerBillingInformationControl1;
         private System.Windows.Forms.DataGridView allCustomerInformationDataGrid;
         private UserControls.ServicesRequestedControl servicesRequestedControl1;
         private UserControls.CustomerServiceAddressControl customerServiceAddressControl1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button addNewCustomerBtn;
     }
 }
 

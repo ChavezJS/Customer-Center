@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,6 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllCustomerInfoDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AllCustomerInfoDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Customer Portal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,17 @@
     <EmbeddedResource Include="UserControls\ServicesRequestedControl.resx">
       <DependentUpon>ServicesRequestedControl.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="AllCustomerInfoDataSet.xsc">
+      <DependentUpon>AllCustomerInfoDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AllCustomerInfoDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AllCustomerInfoDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AllCustomerInfoDataSet.xss">
+      <DependentUpon>AllCustomerInfoDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
